@@ -9,4 +9,7 @@
   flex-direction: column;
   font-size: 1.6rem;
   min-height: 100vh; 
+  &--visible {
+    overflow-x: visible;
+  }
 }

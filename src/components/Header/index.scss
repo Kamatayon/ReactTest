@@ -1,0 +1,63 @@
+.page-header {
+    background: #000;
+    color: #fff;
+    height: 5.8rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 999;
+
+    @media screen and (max-width: 980px) {
+        height: 4.6rem;
+        margin-bottom: 1.2rem;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    &--static {
+        height: auto;
+        margin-bottom: 1.8rem;
+
+        .navigation__logo {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+        }
+
+        .page-header__welcome {
+            margin-left: 25rem;
+        }
+
+        .navigation__search {
+            margin-left: 0;
+        }
+
+        .category-select {
+            border-width: 0 1px 0 0;
+        }
+
+        .page-header__container {
+            height: 5.8rem;
+        }
+    }
+
+    &__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 5.8rem;
+    }
+
+    &__welcome {
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding-left: 3rem;
+        position: relative;
+
+    }
+}
