@@ -9,7 +9,25 @@ interface CategoryListOwnProps {
 }
 
 const CategoryList = ({ category }: CategoryListOwnProps) => {
-  return <div></div>;
+  return (
+    <ul className="category-select__list">
+      {Object.entries(category).map(([name, subCat], i, arr) => (
+        <li>
+          <a className="category-select__list-header">
+            {name}
+            {Object.keys(subCat).length !== 0 && (
+              <svg className="icon icon-arrow-next category-select__list-header-icon">
+                <use xlinkHref="#arrow-next" />
+              </svg>
+            )}
+          </a>
+          {Object.keys(subCat).length !== 0 && (
+            <CategoryList category={subCat} />
+          )}
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default CategoryList;

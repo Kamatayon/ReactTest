@@ -4,7 +4,19 @@ import CategorySelect from "./components/CategorySelect";
 const Search = () => {
   return (
     <form action="" className="search navigation__search">
-      <CategorySelect />
+      <CategorySelect
+        category={{
+          subCategories: {
+            Abrasives: {
+              subCategories: {
+                Test: {
+                  subCategories: {},
+                },
+              },
+            },
+          },
+        }}
+      />
       <div className="search__field-box">
         <input placeholder="Search" type="text" className="search__field" />
         <button type="submit" className="search__submit">

@@ -1,4 +1,5 @@
 import React from "react";
+import CategoryList from "./component/CategoryList";
 
 interface Category {
   subCategories: Record<string, Category>;
@@ -8,7 +9,7 @@ interface CategorySelectOwnProps {
   category: Category;
 }
 
-const CategorySelect = () => {
+const CategorySelect = (props: CategorySelectOwnProps) => {
   return (
     <div className="category-select js-category-select search__category-select">
       <button
@@ -22,6 +23,9 @@ const CategorySelect = () => {
           <use xlinkHref="#chevron-down" />
         </svg>
       </button>
+      <ul>
+        <CategoryList category={props.category} />
+      </ul>
     </div>
   );
 };
