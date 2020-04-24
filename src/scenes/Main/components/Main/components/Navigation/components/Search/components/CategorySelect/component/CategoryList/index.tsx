@@ -31,22 +31,28 @@ const CategoryList = (props: CategoryListProps) => {
             ev.stopPropagation();
             props.changeCategory(name);
           }}
+          className="category-select__li"
         >
-          <a
-            className={`category-select__list-header ${
-              i === selected ? "active" : ""
-            }`}
-          >
-            {name}
+          <div className="category-select__item">
+            <a
+              className={`category-select__list-header ${
+                i === selected ? "active" : ""
+              }`}
+            >
+              {name}
+              {Object.keys(subCat).length !== 0 && (
+                <svg className="icon icon-arrow-next category-select__list-header-icon">
+                  <use xlinkHref="#arrow-next" />
+                </svg>
+              )}
+            </a>
             {Object.keys(subCat).length !== 0 && (
-              <svg className="icon icon-arrow-next category-select__list-header-icon">
-                <use xlinkHref="#arrow-next" />
-              </svg>
+              <ConnectedCategoryList
+                isOpen={selected === i}
+                category={subCat}
+              />
             )}
-          </a>
-          {Object.keys(subCat).length !== 0 && (
-            <ConnectedCategoryList isOpen={selected === i} category={subCat} />
-          )}
+          </div>
         </li>
       ))}
     </ul>

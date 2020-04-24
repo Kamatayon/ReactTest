@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 
 import burger from "assets/svg_icons/burger.svg";
@@ -7,10 +7,15 @@ import ring from "assets/svg_icons/ring.svg";
 import user from "assets/svg_icons/user.svg";
 import closeMenu from "assets/svg_icons/close-menu.svg";
 const Header = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="page-header">
       <div className="container page-header__container js-parent-container">
-        <button type="button" className="page-header__menu js-menu-open">
+        <button
+          type="button"
+          className="page-header__menu js-menu-open"
+          onClick={() => setMobileMenuOpen(true)}
+        >
           <img src={burger} alt="" className="page-header__menu-icon" />
         </button>
         <a href="#" className="page-header__logo">
@@ -65,10 +70,16 @@ const Header = () => {
           </div>
         </button>
       </div>
-      <div className="mobile-menu js-menu">
+      <div
+        className={`mobile-menu js-menu ${isMobileMenuOpen ? "active" : ""}`}
+      >
         <div className="container mobile-menu__container">
           <div className="mobile-menu__header">
-            <button type="button" className="mobile-menu__close js-menu-close">
+            <button
+              type="button"
+              className="mobile-menu__close js-menu-close"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <img src={closeMenu} alt="" className="mobile-menu__close-icon" />
             </button>
             <div className="page-header__welcome mobile-menu__welcome">
