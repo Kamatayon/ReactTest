@@ -9,6 +9,19 @@ const categories: CatalogCategory[] = [
     image: "assets/img/content/category4.png",
     title: "Title",
     links: [
+      ["Cards are generated from array given to the component", "foo.bar"],
+      ["link2", "foo.bar"],
+      ["link3", "foo.bar"],
+      ["link3", "foo.bar"],
+      ["link3", "foo.bar"],
+      ["link3", "foo.bar"],
+      ["link3", "foo.bar"],
+    ],
+  },
+  {
+    image: "assets/img/content/category4.png",
+    title: "Title",
+    links: [
       ["link1", "foo.bar"],
       ["link2", "foo.bar"],
       ["link3", "foo.bar"],
@@ -17,6 +30,11 @@ const categories: CatalogCategory[] = [
       ["link3", "foo.bar"],
       ["link3", "foo.bar"],
     ],
+  },
+  {
+    image: "assets/img/content/category4.png",
+    title: "Empty",
+    links: [],
   },
   {
     image: "assets/img/content/category4.png",
@@ -58,34 +76,8 @@ const categories: CatalogCategory[] = [
     ],
   },
   {
-    image: "assets/img/content/category4.png",
-    title: "Title",
-    links: [
-      ["link1", "foo.bar"],
-      ["link2", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-    ],
-  },
-  {
-    image: "assets/img/content/category4.png",
-    title: "Title",
-    links: [
-      ["link1", "foo.bar"],
-      ["link2", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-      ["link3", "foo.bar"],
-    ],
-  },
-  {
-    image: "assets/img/content/category4.png",
-    title: "Title",
+    image: "",
+    title: "No image",
     links: [
       ["link1", "foo.bar"],
       ["link2", "foo.bar"],

@@ -1,0 +1,14 @@
+.category-select {
+    &__list {
+        &--active {
+            display: block;
+        }
+
+    }
+
+    // &__list-header {
+    //     &--hovered {
+    //         color: red;
+    //     }
+    // }
+}
